@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+//相当于继承了协议，(ZIKTViper.ZIKTViperViewEventHandler 是一个抽象协议,抽象了基本共用的一些协议方法)
 @import ZIKTViper.ZIKTViperViewEventHandler;
 
 @protocol ZIKTNoteListViewEventHandler <ZIKTViperViewEventHandler,UIViewControllerPreviewingDelegate>

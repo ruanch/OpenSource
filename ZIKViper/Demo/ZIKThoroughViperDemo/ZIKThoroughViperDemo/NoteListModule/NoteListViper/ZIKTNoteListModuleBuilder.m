@@ -45,6 +45,7 @@
     [(id<ZIKTViperPresenterPrivate>)presenter setWireframe:wireframe];
     [(id<ZIKTViperPresenterPrivate>)presenter setInteractor:interactor];
     
+    //将ViewController中的eventHandler、viewDataSource代理交给presenter具体处理
     view.eventHandler = presenter;
     view.viewDataSource = presenter;
 }
