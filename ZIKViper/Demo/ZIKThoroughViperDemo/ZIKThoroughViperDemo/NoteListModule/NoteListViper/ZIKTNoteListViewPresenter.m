@@ -147,6 +147,9 @@
     [self.view.noteListTableView reloadData];
 }
 
+/**
+        系统方法的协议
+ */
 #pragma mark UIViewControllerPreviewingDelegate
 
 - (nullable UIViewController *)previewingContext:(id <UIViewControllerPreviewing>)previewingContext viewControllerForLocation:(CGPoint)location {

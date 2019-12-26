@@ -5,7 +5,9 @@
 //  Created by zuik on 2017/7/16.
 //  Copyright © 2017年 zuik. All rights reserved.
 //
-
+/**
+        1.ZIKTNoteModel 持有Entity数据
+ */
 #import "ZIKTNoteDataManager.h"
 #import "ZIKTNoteModel.h"
 

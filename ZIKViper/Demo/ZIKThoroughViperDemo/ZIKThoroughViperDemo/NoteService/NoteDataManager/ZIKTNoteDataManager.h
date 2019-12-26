@@ -5,7 +5,9 @@
 //  Created by zuik on 2017/7/16.
 //  Copyright © 2017年 zuik. All rights reserved.
 //
-
+/**
+        1.ZIKTNoteListDataService 该类就是实现Service协议内容。 单例实现
+ */
 #import <Foundation/Foundation.h>
 #import "ZIKTNoteListDataService.h"
 

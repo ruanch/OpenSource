@@ -6,6 +6,10 @@
 //  Copyright © 2017年 zuik. All rights reserved.
 //
 
+
+/**
+        1.ZIKTViperWireframe 线框类持有ViewController/View
+ */
 #import <Foundation/Foundation.h>
 @import ZIKTViper.ZIKTViperWireframe;
 

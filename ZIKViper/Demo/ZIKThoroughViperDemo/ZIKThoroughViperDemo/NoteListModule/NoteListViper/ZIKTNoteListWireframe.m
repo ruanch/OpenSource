@@ -6,21 +6,26 @@
 //  Copyright © 2017年 zuik. All rights reserved.
 //
 
+/**
+ Wireframe职责
+    1.ZIKTViper.ZIKTViperWireframePrivate 除了View外还持有route
+         2.ZIKTNoteListRouter Route对象
+ 
+    负责描述跳转事情，具体跳转交给Router来做。
+ */
+
 #import <UIKit/UIKit.h>
 #import <objc/runtime.h>
 @import ZIKTViper.ZIKTViperWireframePrivate;
 #import "ZIKTNoteListWireframe.h"
-#import "ZIKTNoteListViewController.h"
-#import "ZIKTNoteListViewPresenter.h"
-#import "ZIKTNoteListInteractor.h"
-#import "ZIKTNoteListModuleBuilder.h"
 #import "ZIKTNoteListRouter.h"
-
-#import "ZIKTEditorWireframeInput.h"
+ 
 
 @interface ZIKTNoteListWireframe () <ZIKTViperWireframePrivate>
+///持有 view 和 router对象操作
 @property (nonatomic, weak) id<ZIKTViperView> view;
 @property (nonatomic, strong) id<ZIKTNoteListRouter> router;
+
 @property (nonatomic, weak) UIViewController *editor;
 @property (nonatomic, assign) BOOL presentingEditor;
 @property (nonatomic, assign) BOOL pushedEditor;
@@ -39,6 +44,7 @@
 }
 
 - (void)presentEditorForCreatingNewNoteWithDelegate:(id<ZIKTEditorDelegate>)delegate completion:(void (^ __nullable)(void))completion {
+    ///Wireframe -> Router -> Builder 又开始新的一轮VIPER
     UIViewController *editorViewController = [[self.router class] viewForCreatingNoteWithDelegate:delegate];
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:editorViewController];
     [[self.router class] presentViewController:navigationController fromViewController:self.view.routeSource animated:YES completion:completion];
@@ -48,6 +54,7 @@
 }
 
 - (void)pushEditorViewForEditingNoteWithUUID:(NSString *)uuid title:(NSString *)title content:(NSString *)content delegate:(id<ZIKTEditorDelegate>)delegate {
+    ///Wireframe -> Router -> Builder 又开始新的一轮VIPER
     UIViewController *editorViewController = [[self.router class] viewForEditingNoteWithUUID:uuid title:title content:content delegate:delegate];
     [[self.router class] pushViewController:editorViewController fromViewController:self.view.routeSource animated:YES];
     [self resetState];
@@ -56,6 +63,7 @@
 }
 
 - (UIViewController *)editorViewForEditingNoteWithUUID:(NSString *)uuid title:(NSString *)title content:(NSString *)content delegate:(id<ZIKTEditorDelegate>)delegate {
+    ///Wireframe -> Router -> Builder 又开始新的一轮VIPER
     UIViewController *editorViewController = [[self.router class] viewForEditingNoteWithUUID:uuid title:title content:content delegate:delegate];
     return editorViewController;
 }
