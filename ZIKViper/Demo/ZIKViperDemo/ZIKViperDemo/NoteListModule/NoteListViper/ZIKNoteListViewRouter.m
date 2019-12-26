@@ -47,6 +47,9 @@
     return YES;
 }
 
+/**
+        通过+load方法替换，实现该方法后把presenter和interactor传入即实现这两个代理类的实现
+ */
 - (void)prepareDestination:(id)destination configuration:(__kindof ZIKViewRouteConfiguration *)configuration {
     NSParameterAssert([destination isKindOfClass:[ZIKNoteListViewController class]]);
     NSParameterAssert([destination conformsToProtocol:@protocol(ZIKViperViewPrivate)]);

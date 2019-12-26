@@ -11,7 +11,7 @@
     1.ZIKTViper.ZIKTViperWireframePrivate 除了View外还持有route
          2.ZIKTNoteListRouter Route对象
  
-    负责描述跳转事情，具体跳转交给Router来做。
+    负责描述跳转事情 ，具体跳转交给Router来做。
  */
 
 #import <UIKit/UIKit.h>

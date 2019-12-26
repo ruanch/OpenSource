@@ -16,7 +16,7 @@
 #import "ZIKLoginViewProtocol.h"
 #import "NoteListRequiredNoteEditorDelegate.h"
 #import "NoteListRequiredNoteEditorProtocol.h"
-
+ 
 @interface ZIKNoteListViewPresenter () <ZIKViperPresenterPrivate,NoteListRequiredNoteEditorDelegate,ZIKLoginViewDelegate>
 @property (nonatomic, strong) ZIKViewRouter *router;
 @property (nonatomic, weak) id<ZIKViperView,ZIKNoteListViewProtocol> view;
