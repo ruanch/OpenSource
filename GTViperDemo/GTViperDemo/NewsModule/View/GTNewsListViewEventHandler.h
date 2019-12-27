@@ -10,7 +10,7 @@
 #import <UIKit/UIKit.h>
 #import "GTViperViewEventHandler.h"
 
-@protocol GTNoteListViewEventHandler <GTViperViewEventHandler,UIViewControllerPreviewingDelegate>
+@protocol GTNewsListViewEventHandler <GTViperViewEventHandler,UIViewControllerPreviewingDelegate>
 - (void)didTouchNavigationBarAddButton;
 - (BOOL)canEditRowAtIndexPath:(NSIndexPath *)indexPath;
 - (void)handleDeleteCellForRowAtIndexPath:(NSIndexPath *)indexPath;

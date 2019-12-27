@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol GTNoteListViewDataSource <NSObject>
+@protocol GTNewsListViewDataSource <NSObject>
 - (NSInteger)numberOfRowsInSection:(NSInteger)section;
 - (NSString *)textOfCellForRowAtIndexPath:(NSIndexPath *)indexPath;
 - (NSString *)detailTextOfCellForRowAtIndexPath:(NSIndexPath *)indexPath;

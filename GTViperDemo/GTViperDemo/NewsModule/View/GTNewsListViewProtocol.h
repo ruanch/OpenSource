@@ -7,6 +7,6 @@
 //
 #import <Foundation/Foundation.h>
 
-@protocol GTNoteListViewProtocol
+@protocol GTNewsListViewProtocol
 - (UITableView *)noteListTableView;
 @end
