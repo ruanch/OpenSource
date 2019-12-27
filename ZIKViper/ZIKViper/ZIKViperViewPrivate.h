@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol ZIKViperViewEventHandler;
 
+///私有化getter/setter的方法，只能在view中使用。
 ///Private getter/setter to configure ZIKViperView. Should only be used inside view or assembly.
 @protocol ZIKViperViewPrivate <ZIKViperView>
 

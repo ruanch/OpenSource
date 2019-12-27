@@ -1,0 +1,541 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1F1058A623B5F4140020051F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F1058A523B5F4140020051F /* AppDelegate.m */; };
+		1F1058A923B5F4140020051F /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F1058A823B5F4140020051F /* SceneDelegate.m */; };
+		1F1058AF23B5F4140020051F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F1058AD23B5F4140020051F /* Main.storyboard */; };
+		1F1058B123B5F41B0020051F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F1058B023B5F41B0020051F /* Assets.xcassets */; };
+		1F1058B423B5F41B0020051F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F1058B223B5F41B0020051F /* LaunchScreen.storyboard */; };
+		1F1058B723B5F41B0020051F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F1058B623B5F41B0020051F /* main.m */; };
+		1F1058C123B5F41B0020051F /* GTViperDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F1058C023B5F41B0020051F /* GTViperDemoTests.m */; };
+		1F1058DD23B5F6030020051F /* GTNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F1058DB23B5F6030020051F /* GTNewsViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1F1058BD23B5F41B0020051F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1F10589923B5F4140020051F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1F1058A023B5F4140020051F;
+			remoteInfo = GTViperDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1F1058A123B5F4140020051F /* GTViperDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GTViperDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F1058A423B5F4140020051F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1F1058A523B5F4140020051F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1F1058A723B5F4140020051F /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		1F1058A823B5F4140020051F /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		1F1058AE23B5F4140020051F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1F1058B023B5F41B0020051F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1F1058B323B5F41B0020051F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1F1058B523B5F41B0020051F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F1058B623B5F41B0020051F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1F1058BC23B5F41B0020051F /* GTViperDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GTViperDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F1058C023B5F41B0020051F /* GTViperDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTViperDemoTests.m; sourceTree = "<group>"; };
+		1F1058C223B5F41B0020051F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F1058CC23B5F48F0020051F /* GTViperInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTViperInteractor.h; sourceTree = "<group>"; };
+		1F1058CD23B5F48F0020051F /* GTViperViewPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTViperViewPrivate.h; sourceTree = "<group>"; };
+		1F1058CE23B5F48F0020051F /* GTViperView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTViperView.h; sourceTree = "<group>"; };
+		1F1058CF23B5F48F0020051F /* GTViperInteractorPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTViperInteractorPrivate.h; sourceTree = "<group>"; };
+		1F1058D023B5F48F0020051F /* GTViperViewEventHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTViperViewEventHandler.h; sourceTree = "<group>"; };
+		1F1058D123B5F48F0020051F /* GTViperRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTViperRouter.h; sourceTree = "<group>"; };
+		1F1058D223B5F48F0020051F /* GTViper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTViper.h; sourceTree = "<group>"; };
+		1F1058D323B5F48F0020051F /* GTViperPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTViperPresenter.h; sourceTree = "<group>"; };
+		1F1058D423B5F48F0020051F /* GTViperPresenterPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTViperPresenterPrivate.h; sourceTree = "<group>"; };
+		1F1058DA23B5F6030020051F /* GTNewsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTNewsViewController.h; sourceTree = "<group>"; };
+		1F1058DB23B5F6030020051F /* GTNewsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTNewsViewController.m; sourceTree = "<group>"; };
+		1F1058DF23B5FAE10020051F /* GTNewsListViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTNewsListViewProtocol.h; sourceTree = "<group>"; };
+		1F1058E023B5FB980020051F /* GTNewsListViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTNewsListViewDataSource.h; sourceTree = "<group>"; };
+		1F1058E123B5FBE70020051F /* GTNewsListViewEventHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTNewsListViewEventHandler.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1F10589E23B5F4140020051F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F1058B923B5F41B0020051F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1F10589823B5F4140020051F = {
+			isa = PBXGroup;
+			children = (
+				1F1058A323B5F4140020051F /* GTViperDemo */,
+				1F1058BF23B5F41B0020051F /* GTViperDemoTests */,
+				1F1058A223B5F4140020051F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1F1058A223B5F4140020051F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1F1058A123B5F4140020051F /* GTViperDemo.app */,
+				1F1058BC23B5F41B0020051F /* GTViperDemoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1F1058A323B5F4140020051F /* GTViperDemo */ = {
+			isa = PBXGroup;
+			children = (
+				1F1058D523B5F5840020051F /* NewsModule */,
+				1F1058CB23B5F4280020051F /* GTViper */,
+				1F1058A423B5F4140020051F /* AppDelegate.h */,
+				1F1058A523B5F4140020051F /* AppDelegate.m */,
+				1F1058A723B5F4140020051F /* SceneDelegate.h */,
+				1F1058A823B5F4140020051F /* SceneDelegate.m */,
+				1F1058AD23B5F4140020051F /* Main.storyboard */,
+				1F1058B023B5F41B0020051F /* Assets.xcassets */,
+				1F1058B223B5F41B0020051F /* LaunchScreen.storyboard */,
+				1F1058B523B5F41B0020051F /* Info.plist */,
+				1F1058B623B5F41B0020051F /* main.m */,
+			);
+			path = GTViperDemo;
+			sourceTree = "<group>";
+		};
+		1F1058BF23B5F41B0020051F /* GTViperDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				1F1058C023B5F41B0020051F /* GTViperDemoTests.m */,
+				1F1058C223B5F41B0020051F /* Info.plist */,
+			);
+			path = GTViperDemoTests;
+			sourceTree = "<group>";
+		};
+		1F1058CB23B5F4280020051F /* GTViper */ = {
+			isa = PBXGroup;
+			children = (
+				1F1058D223B5F48F0020051F /* GTViper.h */,
+				1F1058CC23B5F48F0020051F /* GTViperInteractor.h */,
+				1F1058CF23B5F48F0020051F /* GTViperInteractorPrivate.h */,
+				1F1058D323B5F48F0020051F /* GTViperPresenter.h */,
+				1F1058D423B5F48F0020051F /* GTViperPresenterPrivate.h */,
+				1F1058D123B5F48F0020051F /* GTViperRouter.h */,
+				1F1058CE23B5F48F0020051F /* GTViperView.h */,
+				1F1058D023B5F48F0020051F /* GTViperViewEventHandler.h */,
+				1F1058CD23B5F48F0020051F /* GTViperViewPrivate.h */,
+			);
+			path = GTViper;
+			sourceTree = "<group>";
+		};
+		1F1058D523B5F5840020051F /* NewsModule */ = {
+			isa = PBXGroup;
+			children = (
+				1F1058D623B5F5B20020051F /* Router */,
+				1F1058D723B5F5BC0020051F /* View */,
+				1F1058D823B5F5C90020051F /* Presenter */,
+				1F1058D923B5F5D70020051F /* Interactor */,
+			);
+			path = NewsModule;
+			sourceTree = "<group>";
+		};
+		1F1058D623B5F5B20020051F /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		1F1058D723B5F5BC0020051F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1F1058E123B5FBE70020051F /* GTNewsListViewEventHandler.h */,
+				1F1058E023B5FB980020051F /* GTNewsListViewDataSource.h */,
+				1F1058DF23B5FAE10020051F /* GTNewsListViewProtocol.h */,
+				1F1058DA23B5F6030020051F /* GTNewsViewController.h */,
+				1F1058DB23B5F6030020051F /* GTNewsViewController.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1F1058D823B5F5C90020051F /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		1F1058D923B5F5D70020051F /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1F1058A023B5F4140020051F /* GTViperDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1F1058C523B5F41B0020051F /* Build configuration list for PBXNativeTarget "GTViperDemo" */;
+			buildPhases = (
+				1F10589D23B5F4140020051F /* Sources */,
+				1F10589E23B5F4140020051F /* Frameworks */,
+				1F10589F23B5F4140020051F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GTViperDemo;
+			productName = GTViperDemo;
+			productReference = 1F1058A123B5F4140020051F /* GTViperDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1F1058BB23B5F41B0020051F /* GTViperDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1F1058C823B5F41B0020051F /* Build configuration list for PBXNativeTarget "GTViperDemoTests" */;
+			buildPhases = (
+				1F1058B823B5F41B0020051F /* Sources */,
+				1F1058B923B5F41B0020051F /* Frameworks */,
+				1F1058BA23B5F41B0020051F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1F1058BE23B5F41B0020051F /* PBXTargetDependency */,
+			);
+			name = GTViperDemoTests;
+			productName = GTViperDemoTests;
+			productReference = 1F1058BC23B5F41B0020051F /* GTViperDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1F10589923B5F4140020051F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1120;
+				ORGANIZATIONNAME = NightElf;
+				TargetAttributes = {
+					1F1058A023B5F4140020051F = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
+					1F1058BB23B5F41B0020051F = {
+						CreatedOnToolsVersion = 11.2.1;
+						TestTargetID = 1F1058A023B5F4140020051F;
+					};
+				};
+			};
+			buildConfigurationList = 1F10589C23B5F4140020051F /* Build configuration list for PBXProject "GTViperDemo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1F10589823B5F4140020051F;
+			productRefGroup = 1F1058A223B5F4140020051F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1F1058A023B5F4140020051F /* GTViperDemo */,
+				1F1058BB23B5F41B0020051F /* GTViperDemoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1F10589F23B5F4140020051F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F1058B423B5F41B0020051F /* LaunchScreen.storyboard in Resources */,
+				1F1058B123B5F41B0020051F /* Assets.xcassets in Resources */,
+				1F1058AF23B5F4140020051F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F1058BA23B5F41B0020051F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1F10589D23B5F4140020051F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F1058A623B5F4140020051F /* AppDelegate.m in Sources */,
+				1F1058DD23B5F6030020051F /* GTNewsViewController.m in Sources */,
+				1F1058B723B5F41B0020051F /* main.m in Sources */,
+				1F1058A923B5F4140020051F /* SceneDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F1058B823B5F41B0020051F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F1058C123B5F41B0020051F /* GTViperDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1F1058BE23B5F41B0020051F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1F1058A023B5F4140020051F /* GTViperDemo */;
+			targetProxy = 1F1058BD23B5F41B0020051F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1F1058AD23B5F4140020051F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1F1058AE23B5F4140020051F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1F1058B223B5F41B0020051F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1F1058B323B5F41B0020051F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1F1058C323B5F41B0020051F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1F1058C423B5F41B0020051F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1F1058C623B5F41B0020051F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GTViperDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gt.GTViperDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1F1058C723B5F41B0020051F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GTViperDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gt.GTViperDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1F1058C923B5F41B0020051F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GTViperDemoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gt.GTViperDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GTViperDemo.app/GTViperDemo";
+			};
+			name = Debug;
+		};
+		1F1058CA23B5F41B0020051F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GTViperDemoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gt.GTViperDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GTViperDemo.app/GTViperDemo";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1F10589C23B5F4140020051F /* Build configuration list for PBXProject "GTViperDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F1058C323B5F41B0020051F /* Debug */,
+				1F1058C423B5F41B0020051F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1F1058C523B5F41B0020051F /* Build configuration list for PBXNativeTarget "GTViperDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F1058C623B5F41B0020051F /* Debug */,
+				1F1058C723B5F41B0020051F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1F1058C823B5F41B0020051F /* Build configuration list for PBXNativeTarget "GTViperDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F1058C923B5F41B0020051F /* Debug */,
+				1F1058CA23B5F41B0020051F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1F10589923B5F4140020051F /* Project object */;
+}

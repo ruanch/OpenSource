@@ -8,6 +8,7 @@
 
 #import "ZIKViperInteractor.h"
 
+///私有化getter/setter的方法，只能在Interactor中使用。
 @protocol ZIKViperInteractorPrivate <ZIKViperInteractor>
 - (void)setEventHandler:(id)eventHandler;
 - (void)setDataSource:(id)dataSource;

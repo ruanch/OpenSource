@@ -1,15 +1,15 @@
 //
-//  ZIKViperViewEventHandler.h
-//  ZIKViper
+//  GTViperViewEventHandler.h
+//  GTViper
 //
-//  Created by zuik on 2017/5/24.
-//  Copyright © 2017 zuik. All rights reserved.
+//  Created by rch on 2019/12/17.
+//  Copyright © 2017 nightelf. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
-///Handle event from ZIKViperView
-@protocol ZIKViperViewEventHandler <NSObject>
+///Handle event from GTViperView
+@protocol GTViperViewEventHandler <NSObject>
 
 ///把View的生命周期代理出去，在Presenter中实现生命周期
 @optional

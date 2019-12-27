@@ -12,6 +12,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+///私有化getter/setter的方法，只能在presenter中使用。
 ///Private getter/setter to configure ZIKViperPresenter. Should only be used inside presenter or assembly.
 @protocol ZIKViperPresenterPrivate <ZIKViperPresenter>
 
