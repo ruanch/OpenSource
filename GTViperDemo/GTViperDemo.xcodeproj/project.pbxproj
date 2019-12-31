@@ -15,6 +15,10 @@
 		1F1058B723B5F41B0020051F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F1058B623B5F41B0020051F /* main.m */; };
 		1F1058C123B5F41B0020051F /* GTViperDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F1058C023B5F41B0020051F /* GTViperDemoTests.m */; };
 		1F1058DD23B5F6030020051F /* GTNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F1058DB23B5F6030020051F /* GTNewsViewController.m */; };
+		1F2A221F23BB14370010FF15 /* GTNewsListPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2A221E23BB14370010FF15 /* GTNewsListPresenter.m */; };
+		1F2A222323BB1F330010FF15 /* GTNewsListInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2A222223BB1F330010FF15 /* GTNewsListInteractor.m */; };
+		1F2A222723BB22260010FF15 /* GTNewsDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2A222623BB22260010FF15 /* GTNewsDataManager.m */; };
+		1F2A222B23BB255D0010FF15 /* GTNewsEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2A222A23BB255D0010FF15 /* GTNewsEntity.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +59,15 @@
 		1F1058DF23B5FAE10020051F /* GTNewsListViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTNewsListViewProtocol.h; sourceTree = "<group>"; };
 		1F1058E023B5FB980020051F /* GTNewsListViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTNewsListViewDataSource.h; sourceTree = "<group>"; };
 		1F1058E123B5FBE70020051F /* GTNewsListViewEventHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTNewsListViewEventHandler.h; sourceTree = "<group>"; };
+		1F2A221D23BB14370010FF15 /* GTNewsListPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTNewsListPresenter.h; sourceTree = "<group>"; };
+		1F2A221E23BB14370010FF15 /* GTNewsListPresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTNewsListPresenter.m; sourceTree = "<group>"; };
+		1F2A222023BB1DC20010FF15 /* GTNewsListInteractorInput.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTNewsListInteractorInput.h; sourceTree = "<group>"; };
+		1F2A222123BB1F330010FF15 /* GTNewsListInteractor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTNewsListInteractor.h; sourceTree = "<group>"; };
+		1F2A222223BB1F330010FF15 /* GTNewsListInteractor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTNewsListInteractor.m; sourceTree = "<group>"; };
+		1F2A222523BB22260010FF15 /* GTNewsDataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTNewsDataManager.h; sourceTree = "<group>"; };
+		1F2A222623BB22260010FF15 /* GTNewsDataManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTNewsDataManager.m; sourceTree = "<group>"; };
+		1F2A222923BB255D0010FF15 /* GTNewsEntity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTNewsEntity.h; sourceTree = "<group>"; };
+		1F2A222A23BB255D0010FF15 /* GTNewsEntity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTNewsEntity.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +109,7 @@
 		1F1058A323B5F4140020051F /* GTViperDemo */ = {
 			isa = PBXGroup;
 			children = (
+				1F2A222423BB22020010FF15 /* Service */,
 				1F1058D523B5F5840020051F /* NewsModule */,
 				1F1058CB23B5F4280020051F /* GTViper */,
 				1F1058A423B5F4140020051F /* AppDelegate.h */,
@@ -139,6 +153,7 @@
 		1F1058D523B5F5840020051F /* NewsModule */ = {
 			isa = PBXGroup;
 			children = (
+				1F2A222823BB25370010FF15 /* Entity */,
 				1F1058D623B5F5B20020051F /* Router */,
 				1F1058D723B5F5BC0020051F /* View */,
 				1F1058D823B5F5C90020051F /* Presenter */,
@@ -169,6 +184,8 @@
 		1F1058D823B5F5C90020051F /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				1F2A221D23BB14370010FF15 /* GTNewsListPresenter.h */,
+				1F2A221E23BB14370010FF15 /* GTNewsListPresenter.m */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -176,8 +193,29 @@
 		1F1058D923B5F5D70020051F /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				1F2A222023BB1DC20010FF15 /* GTNewsListInteractorInput.h */,
+				1F2A222123BB1F330010FF15 /* GTNewsListInteractor.h */,
+				1F2A222223BB1F330010FF15 /* GTNewsListInteractor.m */,
 			);
 			path = Interactor;
+			sourceTree = "<group>";
+		};
+		1F2A222423BB22020010FF15 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				1F2A222523BB22260010FF15 /* GTNewsDataManager.h */,
+				1F2A222623BB22260010FF15 /* GTNewsDataManager.m */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		1F2A222823BB25370010FF15 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				1F2A222923BB255D0010FF15 /* GTNewsEntity.h */,
+				1F2A222A23BB255D0010FF15 /* GTNewsEntity.m */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -283,7 +321,11 @@
 				1F1058A623B5F4140020051F /* AppDelegate.m in Sources */,
 				1F1058DD23B5F6030020051F /* GTNewsViewController.m in Sources */,
 				1F1058B723B5F41B0020051F /* main.m in Sources */,
+				1F2A222723BB22260010FF15 /* GTNewsDataManager.m in Sources */,
 				1F1058A923B5F4140020051F /* SceneDelegate.m in Sources */,
+				1F2A222323BB1F330010FF15 /* GTNewsListInteractor.m in Sources */,
+				1F2A222B23BB255D0010FF15 /* GTNewsEntity.m in Sources */,
+				1F2A221F23BB14370010FF15 /* GTNewsListPresenter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

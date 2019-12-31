@@ -2,8 +2,8 @@
 //  GTNewsViewController.h
 //  GTViperDemo
 //
-//  Created by liuke on 2019/12/27.
-//  Copyright © 2019 NightElf. All rights reserved.
+//  Created by rch on 2019/12/17.
+//  Copyright © 2019 nightelf. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
