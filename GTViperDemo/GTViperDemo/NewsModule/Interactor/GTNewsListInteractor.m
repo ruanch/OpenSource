@@ -7,7 +7,8 @@
 //
 
 #import "GTNewsListInteractor.h"
-#import "GTNewsManager.h"
+#import "GTNewsDataManager.h"
+#import "GTNewsEntity.h"
 #import "GTViperInteractorPrivate.h"
 
 @interface GTNewsListInteractor()<GTViperInteractorPrivate>
@@ -15,9 +16,34 @@
 @end
 
 @implementation GTNewsListInteractor
-- (void)loadAllNotes {
-    [[ZIKNoteDataManager sharedInsatnce] fetchAllNotesWithCompletion:^(NSArray *notes) {
-        
-    }];
+- (void)loadAllNews {
+    [[GTNewsDataManager sharedInstace] fetchAllNewsWithCompletion:^(NSArray *news) {}];
 }
+
+- (NSArray<GTNewsEntity *> *)newsList {
+    return [GTNewsDataManager sharedInstace].newsList;
+}
+
+- (NSInteger)newsCount
+{
+    return self.newsList.count;
+}
+
+- (NSString *)contentForNewsAtIndex:(NSInteger)idx {
+    if (self.newsList.count - 1 < idx) {
+        return nil;
+    }
+    
+    return [self.newsList objectAtIndex:idx].content;
+}
+
+
+- (NSString *)titleForNewsAtIndex:(NSUInteger)idx {
+     if (self.newsList.count - 1 < idx) {
+            return nil;
+        }
+        return [self.newsList objectAtIndex:idx].title;
+}
+
+ 
 @end

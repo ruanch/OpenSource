@@ -9,10 +9,13 @@
 #import "GTNewsListPresenter.h"
 #import "GTNewsListViewProtocol.h"
 
+#import "GTViperInteractor.h"
+#import "GTNewsListInteractorInput.h"
 
 @interface GTNewsListPresenter()
 
 @property(nonatomic,weak) id<GTViperView,GTNewsListViewProtocol> view;
+@property(nonatomic,strong) id<GTViperInteractor,GTNewsListInteractorInput> interactor;
  
 @end
 
@@ -43,15 +46,15 @@
 #pragma mark GTViperViewDataSource
 - (NSInteger)numberOfRowsInSection:(NSInteger)section
 {
-    return 1;
+    return self.interactor.newsCount;
 }
 - (NSString *)textOfCellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return @"123";
+    return [self.interactor titleForNewsAtIndex:indexPath.row];
 }
 -(NSString *)detailTextOfCellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return @"content";
+    return [self.interactor contentForNewsAtIndex:indexPath.row];
 }
 
 

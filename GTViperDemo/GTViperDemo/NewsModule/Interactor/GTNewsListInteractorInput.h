@@ -12,6 +12,8 @@
 
 @protocol GTNewsListInteractorInput <NSObject>
 
+
+- (NSInteger)newsCount;
 - (NSString *)titleForNewsAtIndex:(NSUInteger)idx;
 - (NSString *)contentForNewsAtIndex:(NSInteger)idx;
 
