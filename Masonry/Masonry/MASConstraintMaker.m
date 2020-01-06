@@ -33,12 +33,14 @@
 }
 
 - (NSArray *)install {
+    //如果有removeExisting标志将移除后再安装
     if (self.removeExisting) {
         NSArray *installedConstraints = [MASViewConstraint installedConstraintsForView:self.view];
         for (MASConstraint *constraint in installedConstraints) {
             [constraint uninstall];
         }
     }
+    //安装所有约束
     NSArray *constraints = self.constraints.copy;
     for (MASConstraint *constraint in constraints) {
         constraint.updateExisting = self.updateExisting;
@@ -57,11 +59,11 @@
 }
 
 - (MASConstraint *)constraint:(MASConstraint *)constraint addConstraintWithLayoutAttribute:(NSLayoutAttribute)layoutAttribute {
-    
+    //初始化视图属性
     MASViewAttribute *viewAttribute = [[MASViewAttribute alloc] initWithView:self.view layoutAttribute:layoutAttribute];
-    
+    //建立第一个视图约束
     MASViewConstraint *newConstraint = [[MASViewConstraint alloc] initWithFirstViewAttribute:viewAttribute];
-    
+    //判断是否是约束,形成复合约束，把原有约束替换掉
     if ([constraint isKindOfClass:MASViewConstraint.class]) {
         //replace with composite constraint
         NSArray *children = @[constraint, newConstraint];
@@ -70,6 +72,7 @@
         [self constraint:constraint shouldBeReplacedWithConstraint:compositeConstraint];
         return compositeConstraint;
     }
+    //判断没有直接添加约束
     if (!constraint) {
         newConstraint.delegate = self;
         [self.constraints addObject:newConstraint];

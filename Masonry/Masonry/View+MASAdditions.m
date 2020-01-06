@@ -12,9 +12,15 @@
 @implementation MAS_VIEW (MASAdditions)
 
 - (NSArray *)mas_makeConstraints:(void(^)(MASConstraintMaker *))block {
+    //取消自动布局模式
     self.translatesAutoresizingMaskIntoConstraints = NO;
+    //初始化maker
     MASConstraintMaker *constraintMaker = [[MASConstraintMaker alloc] initWithView:self];
+    //这里是用户外面自定义
+    //让maker把用户写的约束的值收集起来
     block(constraintMaker);
+    
+    //maker把约束安装起来，并返回约束集合
     return [constraintMaker install];
 }
 
