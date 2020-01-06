@@ -17,7 +17,7 @@
 @end
 
 @implementation MASCompositeConstraint
-
+//初始化 子约束集合初始化
 - (id)initWithChildren:(NSArray *)children {
     self = [super init];
     if (!self) return nil;
@@ -32,12 +32,13 @@
 
 #pragma mark - MASConstraintDelegate
 
+// 替换约束 变成复合约束
 - (void)constraint:(MASConstraint *)constraint shouldBeReplacedWithConstraint:(MASConstraint *)replacementConstraint {
     NSUInteger index = [self.childConstraints indexOfObject:constraint];
     NSAssert(index != NSNotFound, @"Could not find constraint %@", constraint);
     [self.childConstraints replaceObjectAtIndex:index withObject:replacementConstraint];
 }
-
+//实现抽象类 代理方法
 - (MASConstraint *)constraint:(MASConstraint __unused *)constraint addConstraintWithLayoutAttribute:(NSLayoutAttribute)layoutAttribute {
     id<MASConstraintDelegate> strongDelegate = self.delegate;
     MASConstraint *newConstraint = [strongDelegate constraint:self addConstraintWithLayoutAttribute:layoutAttribute];
@@ -47,7 +48,7 @@
 }
 
 #pragma mark - NSLayoutConstraint multiplier proxies 
-
+// 都是 for in 循环
 - (MASConstraint * (^)(CGFloat))multipliedBy {
     return ^id(CGFloat multiplier) {
         for (MASConstraint *constraint in self.childConstraints) {

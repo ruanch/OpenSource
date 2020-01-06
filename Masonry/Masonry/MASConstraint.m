@@ -7,7 +7,7 @@
 
 #import "MASConstraint.h"
 #import "MASConstraint+Private.h"
-
+//子类必须实现的宏定义（这个写的不错）
 #define MASMethodNotImplemented() \
     @throw [NSException exceptionWithName:NSInternalInconsistencyException \
                                    reason:[NSString stringWithFormat:@"You must override %@ in a subclass.", NSStringFromSelector(_cmd)] \
@@ -21,9 +21,13 @@
 	NSAssert(![self isMemberOfClass:[MASConstraint class]], @"MASConstraint is an abstract class, you should not instantiate it directly.");
 	return [super init];
 }
-
+//NSLayoutRelation的代理方法
 #pragma mark - NSLayoutRelation proxies
-
+// returnType (^blockName)(parameterTypes) = ^returnType(parameters) {...};
+// returnType = MASConstraint *
+// (^) = (^blockName) 隐藏名字
+// (id) = (parameterTypes)
+//这里调用了equalToWithRelation即把第二视图属性传入
 - (MASConstraint * (^)(id))equalTo {
     return ^id(id attribute) {
         return self.equalToWithRelation(attribute, NSLayoutRelationEqual);
@@ -61,7 +65,8 @@
 }
 
 #pragma mark - MASLayoutPriority proxies
-
+// 优先级的的设置
+//MASLayoutPriority 代理方法
 - (MASConstraint * (^)(void))priorityLow {
     return ^id{
         self.priority(MASLayoutPriorityDefaultLow);
@@ -84,9 +89,12 @@
 }
 
 #pragma mark - NSLayoutConstraint constant proxies
-
+//NSLayoutConstraint 代理方法
+//NSLayoutConstraint
 - (MASConstraint * (^)(MASEdgeInsets))insets {
     return ^id(MASEdgeInsets insets){
+        //这里为什么可以用 self.insets 因为下方定义了抽象的定义方法 - (void)setInsets:(MASEdgeInsets __unused)insets { MASMethodNotImplemented(); }
+        //这里也是个设计模式
         self.insets = insets;
         return self;
     };
@@ -94,6 +102,7 @@
 
 - (MASConstraint * (^)(CGFloat))inset {
     return ^id(CGFloat inset){
+        //同上
         self.inset = inset;
         return self;
     };
@@ -101,6 +110,7 @@
 
 - (MASConstraint * (^)(CGSize))sizeOffset {
     return ^id(CGSize offset) {
+        //同上
         self.sizeOffset = offset;
         return self;
     };
@@ -108,6 +118,7 @@
 
 - (MASConstraint * (^)(CGPoint))centerOffset {
     return ^id(CGPoint offset) {
+        //同上
         self.centerOffset = offset;
         return self;
     };
@@ -115,6 +126,7 @@
 
 - (MASConstraint * (^)(CGFloat))offset {
     return ^id(CGFloat offset){
+        //同上
         self.offset = offset;
         return self;
     };
@@ -134,7 +146,7 @@
 }
 
 #pragma mark - NSLayoutConstraint constant setter
-
+// constant 设置值
 - (void)setLayoutConstantWithValue:(NSValue *)value {
     if ([value isKindOfClass:NSNumber.class]) {
         self.offset = [(NSNumber *)value doubleValue];
@@ -156,7 +168,7 @@
 }
 
 #pragma mark - Semantic properties
-
+//语义的定义
 - (MASConstraint *)with {
     return self;
 }
@@ -165,6 +177,8 @@
     return self;
 }
 
+//以下是属性的添加
+//返回自身，裢式编程
 #pragma mark - Chaining
 
 - (MASConstraint *)addConstraintWithLayoutAttribute:(NSLayoutAttribute __unused)layoutAttribute {
@@ -258,6 +272,7 @@
 
 #endif
 
+//以下是子类需要实现的方法
 #pragma mark - Abstract
 
 - (MASConstraint * (^)(CGFloat multiplier))multipliedBy { MASMethodNotImplemented(); }

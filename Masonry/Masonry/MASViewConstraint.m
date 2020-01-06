@@ -182,6 +182,8 @@ static char kInstalledConstraintsKey;
 
 #pragma mark - NSLayoutRelation proxy
 //比较两者的关系是否相等
+//主要添加第二个视图属性。mas_equalTo 、 equalToWithRelation 调用了这个
+//这里的对比可以对比数组关系,形成一个复合约束
 - (MASConstraint * (^)(id, NSLayoutRelation))equalToWithRelation {
     return ^id(id attribute, NSLayoutRelation relation) {
         if ([attribute isKindOfClass:NSArray.class]) {
@@ -190,6 +192,7 @@ static char kInstalledConstraintsKey;
             for (id attr in attribute) {
                 MASViewConstraint *viewConstraint = [self copy];
                 viewConstraint.layoutRelation = relation;
+                //在数组里只添加第一视图的约束 ， 这里添加了 第二视图的属性对应关系 比如调用了mas_equalTo等其它
                 viewConstraint.secondViewAttribute = attr;
                 [children addObject:viewConstraint];
             }

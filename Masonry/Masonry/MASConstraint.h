@@ -8,6 +8,10 @@
 
 #import "MASUtilities.h"
 
+
+//模板设计模式
+//定义好模板方法
+//
 /**
  *	Enables Constraints to be created with chainable syntax
  *  Constraint can represent single NSLayoutConstraint (MASViewConstraint) 

@@ -19,6 +19,8 @@
 - (NSArray *)makeConstraints:(void(^)(MASConstraintMaker *make))block;
 - (NSArray *)updateConstraints:(void(^)(MASConstraintMaker *make))block;
 - (NSArray *)remakeConstraints:(void(^)(MASConstraintMaker *make))block;
+- (void)distributeViewsAlongAxis:(MASAxisType)axisType withFixedSpacing:(CGFloat)fixedSpacing leadSpacing:(CGFloat)leadSpacing tailSpacing:(CGFloat)tailSpacing;
+- (void)distributeViewsAlongAxis:(MASAxisType)axisType withFixedItemLength:(CGFloat)fixedItemLength leadSpacing:(CGFloat)leadSpacing tailSpacing:(CGFloat)tailSpacing;
 
 @end
 
@@ -35,6 +37,18 @@
 - (NSArray *)remakeConstraints:(void(^)(MASConstraintMaker *))block {
     return [self mas_remakeConstraints:block];
 }
+
+- (void)distributeViewsAlongAxis:(MASAxisType)axisType withFixedSpacing:(CGFloat)fixedSpacing leadSpacing:(CGFloat)leadSpacing tailSpacing:(CGFloat)tailSpacing
+{
+    [self distributeViewsAlongAxis:axisType withFixedSpacing:fixedSpacing leadSpacing:leadSpacing tailSpacing:tailSpacing];
+}
+
+- (void)distributeViewsAlongAxis:(MASAxisType)axisType withFixedItemLength:(CGFloat)fixedItemLength leadSpacing:(CGFloat)leadSpacing tailSpacing:(CGFloat)tailSpacing
+{
+    [self distributeViewsAlongAxis:axisType withFixedItemLength:fixedItemLength leadSpacing:leadSpacing tailSpacing:tailSpacing];
+}
+
+
 
 @end
 

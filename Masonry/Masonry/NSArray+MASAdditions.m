@@ -38,14 +38,20 @@
     return constraints;
 }
 
+//axisType 横排/竖排
+//fixedSpacing间隔
+//左边leadSpacing
+//右边tailSpacing
 - (void)mas_distributeViewsAlongAxis:(MASAxisType)axisType withFixedSpacing:(CGFloat)fixedSpacing leadSpacing:(CGFloat)leadSpacing tailSpacing:(CGFloat)tailSpacing {
+    //如果数组小于2就不可以用这个方法
     if (self.count < 2) {
         NSAssert(self.count>1,@"views to distribute need to bigger than one");
         return;
     }
-    
+    //找到数组里共有父视图
     MAS_VIEW *tempSuperView = [self mas_commonSuperviewOfViews];
     if (axisType == MASAxisTypeHorizontal) {
+        //判断是否有第一个视图的处理
         MAS_VIEW *prev;
         for (int i = 0; i < self.count; i++) {
             MAS_VIEW *v = self[i];
@@ -53,10 +59,12 @@
                 if (prev) {
                     make.width.equalTo(prev);
                     make.left.equalTo(prev.mas_right).offset(fixedSpacing);
+                    //最后一个离右边
                     if (i == self.count - 1) {//last one
                         make.right.equalTo(tempSuperView).offset(-tailSpacing);
                     }
                 }
+                //第一个离左边
                 else {//first one
                     make.left.equalTo(tempSuperView).offset(leadSpacing);
                 }
@@ -73,10 +81,12 @@
                 if (prev) {
                     make.height.equalTo(prev);
                     make.top.equalTo(prev.mas_bottom).offset(fixedSpacing);
+                    //最后一个离下边
                     if (i == self.count - 1) {//last one
                         make.bottom.equalTo(tempSuperView).offset(-tailSpacing);
                     }                    
                 }
+                //第一个离上边
                 else {//first one
                     make.top.equalTo(tempSuperView).offset(leadSpacing);
                 }
@@ -86,7 +96,10 @@
         }
     }
 }
-
+//axisType 横排/竖排
+//fixedItemLength个数
+//左边leadSpacing
+//右边tailSpacing
 - (void)mas_distributeViewsAlongAxis:(MASAxisType)axisType withFixedItemLength:(CGFloat)fixedItemLength leadSpacing:(CGFloat)leadSpacing tailSpacing:(CGFloat)tailSpacing {
     if (self.count < 2) {
         NSAssert(self.count>1,@"views to distribute need to bigger than one");
@@ -105,6 +118,7 @@
                         make.right.equalTo(tempSuperView).offset(-tailSpacing);
                     }
                     else {
+                        //算出间隔距离
                         CGFloat offset = (1-(i/((CGFloat)self.count-1)))*(fixedItemLength+leadSpacing)-i*tailSpacing/(((CGFloat)self.count-1));
                         make.right.equalTo(tempSuperView).multipliedBy(i/((CGFloat)self.count-1)).with.offset(offset);
                     }
@@ -139,7 +153,7 @@
         }
     }
 }
-
+//搜索共同的父视图集合
 - (MAS_VIEW *)mas_commonSuperviewOfViews
 {
     MAS_VIEW *commonSuperview = nil;

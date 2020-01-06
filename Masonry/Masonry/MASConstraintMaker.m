@@ -63,7 +63,7 @@
     MASViewAttribute *viewAttribute = [[MASViewAttribute alloc] initWithView:self.view layoutAttribute:layoutAttribute];
     //建立第一个视图约束
     MASViewConstraint *newConstraint = [[MASViewConstraint alloc] initWithFirstViewAttribute:viewAttribute];
-    //判断是否是约束,形成复合约束，把原有约束替换掉
+    //判断是否是约束,形成复合约束，把原有约束替换掉成复合约束
     if ([constraint isKindOfClass:MASViewConstraint.class]) {
         //replace with composite constraint
         NSArray *children = @[constraint, newConstraint];
